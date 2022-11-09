@@ -53,7 +53,10 @@ public class KitImpl extends BaseButton implements Kit {
     }
 
     public KitImpl(final DuelsPlugin plugin, final String name, final PlayerInventory inventory) {
-        this(plugin, name, null, false, false, new HashSet<>());
+        this(plugin, name, ItemBuilder.of(inventory.getItemInMainHand().getType())
+                        .name("&3" + name)
+                        .lore(" ", "&a&lKliknij, aby wysłać wyzwanie!")
+                        .build(), false, false, new HashSet<>());
         InventoryUtil.addToMap(inventory, items);
     }
 
