@@ -11,7 +11,7 @@ website: https://www.spigotmc.org/resources/duels.20171/
 description: An ultimate solution to server owners wanting to create a duel system.
 
 commands:
-   duel:
+   pojedynek:
      description: Send, accept, or deny a duel request.
      aliases: [1v1]
    queue:
