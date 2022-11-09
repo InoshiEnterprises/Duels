@@ -34,7 +34,7 @@ import org.bukkit.command.CommandSender;
 public class DuelsCommand extends BaseCommand {
 
     public DuelsCommand(final DuelsPlugin plugin) {
-        super(plugin, "pojedynek", Permissions.ADMIN, false);
+        super(plugin, "duels", Permissions.ADMIN, false);
         child(
             new HelpCommand(plugin),
             new SavekitCommand(plugin),
