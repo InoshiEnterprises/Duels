@@ -38,6 +38,7 @@ public class UserData implements User {
     private volatile int losses;
     private boolean requests = true;
 
+    private static final String GLOBAL_RATING_NAMESPACE = "global";
     private ConcurrentHashMap<String, Integer> rating;
     private List<MatchData> matches = new ArrayList<>();
 
@@ -126,7 +127,7 @@ public class UserData implements User {
     }
 
     private int getRatingUnsafe(final Kit kit) {
-        return this.rating != null ? this.rating.getOrDefault(kit == null ? "-" : kit.getName(), defaultRating) : defaultRating;
+        return this.rating != null ? this.rating.getOrDefault(GLOBAL_RATING_NAMESPACE, defaultRating) : defaultRating;
     }
 
     public void setRating(final Kit kit, final int rating) {
@@ -134,7 +135,7 @@ public class UserData implements User {
             this.rating = new ConcurrentHashMap<>();
         }
 
-        this.rating.put(kit == null ? "-" : kit.getName(), rating);
+        this.rating.put(GLOBAL_RATING_NAMESPACE, rating);
 
         if (!isOnline()) {
             trySave();
