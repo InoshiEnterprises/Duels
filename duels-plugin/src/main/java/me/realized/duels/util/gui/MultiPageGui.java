@@ -98,7 +98,7 @@ public class MultiPageGui<P extends JavaPlugin> extends AbstractGui<P> {
                     last = last.next;
                 }
 
-                last.setTitle(title + " (" + pageNum + "/" + totalPages + ")");
+                last.setTitle(title);
                 last.clear();
 
                 if (prev != null) {
@@ -124,7 +124,7 @@ public class MultiPageGui<P extends JavaPlugin> extends AbstractGui<P> {
 
     private PageNode createPage(final int page, final int total) {
         return new PageNode(InventoryBuilder
-            .of(title + " (" + page + "/" + total + ")", size)
+            .of(title, size)
             .fillRange(prevPageSlot, nextPageSlot + 1, getSpaceFiller())
             .build());
     }

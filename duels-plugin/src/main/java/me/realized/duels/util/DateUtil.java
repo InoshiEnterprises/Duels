@@ -39,15 +39,15 @@ public final class DateUtil {
         StringBuilder sb = new StringBuilder();
 
         if (years > 0) {
-            sb.append(years).append("yr");
+            sb.append(years).append("r");
         }
 
         if (months > 0) {
-            sb.append(months).append("mo");
+            sb.append(months).append("mies");
         }
 
         if (weeks > 0) {
-            sb.append(weeks).append("w");
+            sb.append(weeks).append("t");
         }
 
         if (days > 0) {
@@ -55,7 +55,7 @@ public final class DateUtil {
         }
 
         if (hours > 0) {
-            sb.append(hours).append("h");
+            sb.append(hours).append("godz");
         }
 
         if (minutes > 0) {
@@ -91,7 +91,7 @@ public final class DateUtil {
         StringBuilder builder = new StringBuilder();
 
         if (years > 0) {
-            builder.append(years).append(years > 1 ? " years" : " year");
+            builder.append(years).append(years > 1 ? " lata" : " rok");
         }
 
         if (months > 0) {
@@ -99,7 +99,7 @@ public final class DateUtil {
                 builder.append(" ");
             }
 
-            builder.append(months).append(months > 1 ? " months" : " month");
+            builder.append(months).append(months > 1 ? " miesięcy" : " miesiąc");
         }
 
         if (weeks > 0) {
@@ -107,7 +107,7 @@ public final class DateUtil {
                 builder.append(" ");
             }
 
-            builder.append(weeks).append(weeks > 1 ? " weeks" : " week");
+            builder.append(weeks).append(weeks > 1 ? " tygodni" : " tydzień");
         }
 
         if (days > 0) {
@@ -115,7 +115,7 @@ public final class DateUtil {
                 builder.append(" ");
             }
 
-            builder.append(days).append(days > 1 ? " days" : " day");
+            builder.append(days).append(days > 1 ? " dni" : " dzień");
         }
 
         if (hours > 0) {
@@ -123,7 +123,7 @@ public final class DateUtil {
                 builder.append(" ");
             }
 
-            builder.append(hours).append(hours > 1 ? " hours" : " hour");
+            builder.append(hours).append(hours > 1 ? " godziny" : " godzina");
         }
 
         if (minutes > 0) {
@@ -131,7 +131,7 @@ public final class DateUtil {
                 builder.append(" ");
             }
 
-            builder.append(minutes).append(minutes > 1 ? " minutes" : " minute");
+            builder.append(minutes).append(minutes > 1 ? " minuty" : " minuta");
         }
 
         if (seconds > 0) {
@@ -139,7 +139,7 @@ public final class DateUtil {
                 builder.append(" ");
             }
 
-            builder.append(seconds).append(seconds > 1 ? " seconds" : " second");
+            builder.append(seconds).append(seconds > 1 ? " sekundy" : " sekunda");
         }
 
         return builder.toString();

@@ -32,7 +32,7 @@ public class Queue extends BaseButton implements DQueue {
 
     public Queue(final DuelsPlugin plugin, final Kit kit, final int bet) {
         super(plugin, ItemBuilder
-            .of((plugin.getConfiguration().isInheritKitItemType() && kit != null) ? kit.getDisplayed().clone() : ItemBuilder.of(Material.DIAMOND_SWORD).build())
+            .of(kit.getDisplayed().clone())
             .name(plugin.getLang().getMessage("GUI.queues.buttons.queue.name",
                 "kit", kit != null ? kit.getName() : plugin.getLang().getMessage("GENERAL.none"), "bet_amount", bet, "in_queue", 0, "in_match", 0))
             .lore(plugin.getLang().getMessage("GUI.queues.buttons.queue.lore",
