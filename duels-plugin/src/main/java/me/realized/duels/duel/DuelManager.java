@@ -455,7 +455,7 @@ public class DuelManager implements Loadable {
 
         while (iterator.hasNext()) {
             final Player player = iterator.next();
-            builder.add(StringUtil.color(color + player.getName()), Action.RUN_COMMAND, "/duel _ " + player.getUniqueId());
+            builder.add(StringUtil.color(color + player.getName()), Action.RUN_COMMAND, "/pojedynek _ " + player.getUniqueId());
 
             if (iterator.hasNext()) {
                 builder.add(StringUtil.color(color + ", "));
