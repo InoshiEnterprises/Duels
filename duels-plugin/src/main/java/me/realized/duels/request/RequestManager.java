@@ -75,10 +75,10 @@ public class RequestManager implements Loadable, Listener {
         TextBuilder
             .of(lang.getMessage(path + "info.text"), null, null, Action.SHOW_TEXT, lang.getMessage(path + "info.hover-text"))
             .add(lang.getMessage(path + "accept.text"),
-                ClickEvent.Action.RUN_COMMAND, "/duel accept " + sender.getName(),
+                ClickEvent.Action.RUN_COMMAND, "/pojedynek akceptuj " + sender.getName(),
                 Action.SHOW_TEXT, lang.getMessage(path + "accept.hover-text"))
             .add(lang.getMessage(path + "deny.text"),
-                ClickEvent.Action.RUN_COMMAND, "/duel deny " + sender.getName(),
+                ClickEvent.Action.RUN_COMMAND, "/pojedynek odrzuć " + sender.getName(),
                 Action.SHOW_TEXT, lang.getMessage(path + "deny.hover-text"))
             .send(target);
         TextBuilder.of(lang.getMessage(path + "extra.text"), null, null, Action.SHOW_TEXT, lang.getMessage(path + "extra.hover-text")).send(target);
