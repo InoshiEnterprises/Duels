@@ -573,7 +573,7 @@ public class DuelManager implements Loadable {
                 final String kitName = match.getKit() != null ? match.getKit().getName() : lang.getMessage("GENERAL.none");
                 final long duration = System.currentTimeMillis() - match.getStart();
                 final long time = GREGORIAN_CALENDAR.getTimeInMillis();
-                final MatchData matchData = new MatchData(winner.getName(), player.getName(), kitName, time, duration, health);
+                final MatchData matchData = new MatchData(match.getId().toString(), winner.getName(), player.getName(), kitName, time, duration, health);
                 handleStats(match, userDataManager.get(winner), userDataManager.get(player), matchData);
                 plugin.doSyncAfter(() -> handleInventories(match), 1L);
                 plugin.doSyncAfter(() -> {

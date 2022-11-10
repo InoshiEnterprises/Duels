@@ -21,6 +21,9 @@ import org.jetbrains.annotations.NotNull;
 public class MatchImpl implements Match {
 
     @Getter
+    private final UUID id;
+
+    @Getter
     private final ArenaImpl arena;
     @Getter
     private final long start;
@@ -38,13 +41,18 @@ public class MatchImpl implements Match {
     // Default value for players is false, which is set to true if player is killed in the match.
     private final Map<Player, Boolean> players = new HashMap<>();
 
-    MatchImpl(final ArenaImpl arena, final KitImpl kit, final Map<UUID, List<ItemStack>> items, final int bet, final Queue source) {
+    MatchImpl(final UUID id, final ArenaImpl arena, final KitImpl kit, final Map<UUID, List<ItemStack>> items, final int bet, final Queue source) {
+        this.id = id;
         this.arena = arena;
         this.start = System.currentTimeMillis();
         this.kit = kit;
         this.items = items;
         this.bet = bet;
         this.source = source;
+    }
+
+    MatchImpl(final ArenaImpl arena, final KitImpl kit, final Map<UUID, List<ItemStack>> items, final int bet, final Queue source) {
+        this(UUID.randomUUID(), arena, kit, items, bet, source);
     }
 
     Map<Player, Boolean> getPlayerMap() {

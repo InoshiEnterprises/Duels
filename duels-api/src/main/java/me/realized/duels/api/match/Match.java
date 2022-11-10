@@ -2,6 +2,8 @@ package me.realized.duels.api.match;
 
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
+
 import me.realized.duels.api.arena.Arena;
 import me.realized.duels.api.kit.Kit;
 import org.bukkit.entity.Player;
@@ -14,6 +16,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public interface Match {
 
+    UUID getId();
 
     /**
      * The {@link Arena} this {@link Match} is taking place in.
