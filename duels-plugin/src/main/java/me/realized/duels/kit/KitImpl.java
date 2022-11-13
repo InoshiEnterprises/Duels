@@ -45,6 +45,7 @@ public class KitImpl extends BaseButton implements Kit {
             .of(displayed.getType())
             .name("&3" + name)
             .lore(" ", "&a&lKliknij, aby wysłać wyzwanie!")
+            .hide()
             .build());
         this.name = name;
         this.usePermission = usePermission;
@@ -56,6 +57,7 @@ public class KitImpl extends BaseButton implements Kit {
         this(plugin, name, ItemBuilder.of(inventory.getItemInMainHand().getType())
                         .name("&3" + name)
                         .lore(" ", "&a&lKliknij, aby wysłać wyzwanie!")
+                        .hide()
                         .build(), false, false, new HashSet<>());
         InventoryUtil.addToMap(inventory, items);
     }

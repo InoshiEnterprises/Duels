@@ -15,6 +15,7 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.attribute.AttributeModifier.Operation;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
@@ -64,6 +65,15 @@ public final class ItemBuilder {
         final ItemMeta meta = result.getItemMeta();
         consumer.accept(meta);
         result.setItemMeta(meta);
+        return this;
+    }
+
+    public ItemBuilder hide() {
+        ItemMeta meta = result.getItemMeta();
+        if (meta != null) {
+            meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+            result.setItemMeta(meta);
+        }
         return this;
     }
 
