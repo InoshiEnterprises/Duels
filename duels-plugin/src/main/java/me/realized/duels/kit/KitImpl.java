@@ -43,8 +43,8 @@ public class KitImpl extends BaseButton implements Kit {
         final Set<Characteristic> characteristics) {
         super(plugin, ItemBuilder
             .of(displayed.getType())
-            .name("&3" + name)
-            .lore(" ", "&a&lKliknij, aby wysłać wyzwanie!")
+            .name("&b" + name)
+            .lore("&7Pojedynek nierankingowy", " ", "&bKliknij, aby wysłać wyzwanie")
             .hide()
             .build());
         this.name = name;

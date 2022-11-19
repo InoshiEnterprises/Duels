@@ -61,7 +61,7 @@ public class SettingsGui extends SinglePageGui<DuelsPlugin> {
             }
         }
 
-        set(0, 2, 3, new RequestSendButton(plugin));
-        set(7, 9, 3, new CancelButton(plugin));
+        set(0, 3, 3, new RequestSendButton(plugin));
+        set(6, 9, 3, new CancelButton(plugin));
     }
 }
